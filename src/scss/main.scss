@@ -1,6 +1,5 @@
-@import 'vars';
-@import './mixins';
 
-header {
-    @include flex-all-center;
-}
+@import './mixins';
+@import './base';
+@import './globals';
+
