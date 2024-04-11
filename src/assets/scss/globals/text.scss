@@ -111,9 +111,7 @@
                 background-color: var(--neutral-color-100);
                 transform: translateY(-43px);
 
-                @include mini-desktop {
-                    display: none;
-                }
+                
             }
         }
 
