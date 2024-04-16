@@ -1,11 +1,20 @@
 .header {
     padding: 26px 0 22px;
+    @include mobile {
+        padding: 22px 0 18px;
+    }
     &__container {
         @include flex-all-between;
     }
 
     &__logo {
+        position: relative;
+        z-index: var(--z-index-4);
+
         & svg {
+            @include mobile {
+                width: 130px;
+            }
             & path {
                 &:not(:last-child) {
                     fill: var(--logo-color-text);
@@ -26,13 +35,22 @@
         @include small-tablet {
             position: fixed;
             top: 0;
-            left: 0;
+            left: -9999vw;
             z-index: var(--z-index-3);
             flex-direction: column;
             justify-content: center;
             width: 80dvw;
             height: 100dvh;
             background-color: var(--neutral-color-10);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+
+            &--visible {
+                left: 0;
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 
@@ -86,6 +104,10 @@
         gap: 32px;
         @include small-tablet {
             flex-direction: column;
+            gap: 20px;
+        }
+        @include mobile {
+            gap: 10px;
         }
     }
 
@@ -94,6 +116,11 @@
         font-weight: 500;
         line-height: 1.62;
         color: var(--neutral-color-100);
+
+        @include small-tablet {
+            line-height: 200%;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -125,6 +152,7 @@
         background-color: #000000b3;
         opacity: 0;
         visibility: hidden;
+        transition: var(--transition);
 
         &--visible {
             opacity: 1;
