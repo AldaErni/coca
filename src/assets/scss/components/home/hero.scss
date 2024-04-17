@@ -1,0 +1,182 @@
+.hero {
+  overflow-x: hidden;
+    padding-top: 201px;
+
+    &__container {
+        @include flex-justify-between;
+        position: relative;
+        align-items: flex-end;
+
+        &::before {
+            top: -50px;
+            left: -80px;
+            background: #fa7515;
+            width: 551px;
+            height: 551px;
+            opacity: 0.13;
+            filter: blur(220px);
+        }
+        &::after {
+            right: -400px;
+            bottom: -170px;
+            width: 525px;
+            height: 525px;
+
+            background: var(--success-color-70);
+            filter: blur(180px);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            display: inline-block;
+            z-index: var(--z-index-0);
+        }
+    }
+
+    &__left {
+        max-width: 599px;
+    }
+    &__title {
+        margin-bottom: 114px;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 120%;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+    }
+    &__subtitle {
+        margin-bottom: 69px;
+    }
+
+    &__form {
+        @include flex-align-center;
+        gap: 16px;
+    }
+
+    &__input {
+        border-bottom: 1px solid var(--neutral-color-40);
+        padding-bottom: 23px;
+        min-width: 280px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--neutral-color-100);
+        background-color: transparent;
+    }
+
+    &__right {
+        position: relative;
+    }
+
+    &__sales {
+        padding: 20px;
+        margin-bottom: 29px;
+
+        &-title {
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            letter-spacing: -0.03em;
+            color: #1d1e25;
+        }
+    }
+
+    &__customer {
+        position: absolute;
+        top: -60px;
+        right: -140px;
+        display: inline-block;
+        padding: 15px 18px;
+        max-width: 213px;
+        &-title {
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 187%;
+            letter-spacing: -0.03em;
+            color: #1d1e25;
+        }
+    }
+
+    &__sales,
+    &__customer {
+        border-radius: 8px;
+        box-shadow: 20px 40px 80px 0 #5960871f;
+        background: #fff;
+    }
+
+    &__stats {
+        border-radius: 8px;
+        padding: 20px 29px;
+        box-shadow: 20px 40px 80px 0 #2d33511f;
+        text-align: left;
+        background: #000;
+
+        &-head {
+            &-th {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 143%;
+                color: #5c616f;
+            }
+        }
+
+        &-body {
+            &-th {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 130%;
+                white-space: nowrap;
+                color: #fff;
+
+                &:nth-child(1) {
+                    padding-right: 80px;
+                }
+            }
+
+            &-num {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 143%;
+
+                &--green {
+                    color: #60d39c;
+
+                    &::before {
+                        background: url('../assets/icons/green-arrow-icon.svg');
+                    }
+                }
+                &--red {
+                    color: #e35454;
+                    &::before {
+                        background: url('../assets/icons/red-arrow-icon.svg');
+                    }
+                }
+                &--green::before,
+                &--red::before {
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            &-text {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 157%;
+                letter-spacing: -0.04em;
+                color: #5c616e;
+            }
+        }
+    }
+
+    &__btn {
+        padding: 16px 44px;
+        color: var(--neutral-color-10);
+        background-color: var(--neutral-color-100);
+    }
+}
