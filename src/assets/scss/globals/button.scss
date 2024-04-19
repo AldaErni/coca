@@ -7,6 +7,10 @@
         text-align: center;
         transition: var(--transition);
 
+        @include mobile {
+          font-size: 14px;
+        }
+
         &:hover {
             opacity: 0.9;
         }
