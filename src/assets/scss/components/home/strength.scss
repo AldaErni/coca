@@ -1,0 +1,39 @@
+.strength {
+  padding: 66px 0 160px;
+    &__list {
+        @include flex-align-center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            @include flex-align-center;
+            gap: 72px;
+            margin-right: 72px;
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 1px;
+                height: 99px;
+                background-color: var(--neutral-color-40);
+            }
+        }
+
+        &-text {
+            font-weight: 500;
+            line-height: 178%;
+            color: #7e8492;
+        }
+
+        &-num {
+            display: block;
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 120%;
+            color: var(--neutral-color-100);
+        }
+    }
+    &__list,
+    &__img {
+      margin-bottom: 80px;
+    }
+}
