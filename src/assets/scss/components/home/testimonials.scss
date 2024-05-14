@@ -1,0 +1,48 @@
+.testimonials {
+    padding: 69px 0 160px;
+
+    &__head {
+        @include flex-all-between;
+        margin-bottom: 48px;
+    }
+
+    &__title {
+        max-width: 530px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+    }
+
+    &__desc {
+        max-width: 376px;
+        font-weight: 500;
+        line-height: 178%;
+        color: #7e8492;
+    }
+
+    &__rating {
+        @include flex-align-center;
+        gap: 8px;
+        margin-bottom: 19px;
+
+        &-num {
+            font-weight: 500;
+            line-height: 162%;
+            color: var(--neutral-color-100);
+        }
+    }
+
+    &__comment {
+        &-text {
+          margin-bottom: 40px;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
+        }
+
+        &-autor {
+          font-style: normal;
+        }
+    }
+}
