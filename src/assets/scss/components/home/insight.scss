@@ -5,12 +5,12 @@
         border-top: 1px solid var(--neutral-color-30);
 
         @include mobile {
-          padding-top: 86px;
-          padding-bottom: 61px;
+            padding-top: 86px;
+            padding-bottom: 61px;
         }
 
         @include small-mobile {
-          padding-bottom: 41px;
+            padding-bottom: 41px;
         }
     }
 
@@ -21,7 +21,7 @@
         color: var(--neutral-color-100);
 
         @include mobile {
-          margin-bottom: 12px;
+            margin-bottom: 12px;
         }
     }
 
@@ -32,7 +32,7 @@
         color: #7e8492;
 
         @include mobile {
-          margin-bottom: 40px;
+            margin-bottom: 40px;
         }
     }
 
@@ -43,6 +43,9 @@
 
     &__slider {
         position: relative;
+        &-pagination {
+            height: 100px;
+        }
         &-btns {
             @include flex-all-center;
             position: absolute;
@@ -55,14 +58,14 @@
             border-radius: 50%;
             background-color: #fff;
             @include tablet {
-              display: none;
+                display: none;
             }
             @include small-mobile {
-              top: 80px;
-              left: 93%;
-              display: flex;
-              width: 50px;
-              height: 50px;
+                top: 80px;
+                left: 93%;
+                display: flex;
+                width: 50px;
+                height: 50px;
             }
         }
     }
@@ -75,7 +78,7 @@
         }
 
         @include mobile {
-          max-width: 400px;
+            max-width: 400px;
         }
 
         &-img {
@@ -89,8 +92,8 @@
             color: #7e8492;
 
             @include small-mobile {
-              flex-direction: column;
-              align-items: flex-start;
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
 
