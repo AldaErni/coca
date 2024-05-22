@@ -83,7 +83,18 @@
 
         &-img {
             margin-bottom: 16px;
+            animation: fadeIn 5s;
         }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         &-head {
             @include flex-all-between;
             margin-bottom: 16px;
