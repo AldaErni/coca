@@ -1,9 +1,21 @@
 .hero {
     padding: 90px 0 78px;
 
+    @include mobile {
+      padding: 40px 0 68px;
+    }
+
     &__top {
         padding-bottom: 186px;
         text-align: center;
+
+        @include tablet {
+          padding-bottom: 86px;
+        }
+
+        @include mobile {
+          padding-bottom: 56px;
+        }
 
         &::before {
             top: -20px;
@@ -23,6 +35,10 @@
         text-align: center;
         color: var(--primary-color-30);
         background: #1463ff1a;
+
+        @include small-mobile {
+          margin-bottom: 18px;
+        }
     }
 
     &__descr {
@@ -31,6 +47,10 @@
         font-weight: 700;
         letter-spacing: -0.04em;
         color: var(--neutral-color-100);
+
+        @include mobile {
+          margin-bottom: 36px;
+        }
     }
 
     &__switcher {
@@ -64,7 +84,9 @@
         }
 
         &-wrapper {
-            @include flex-all-center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             gap: 12px;
         }
         &-text {
@@ -79,9 +101,45 @@
         border: 1px solid var(--neutral-color-30);
         border-radius: 16px;
         padding: 40px 24px;
+
+        @include mini-desktop {
+            max-width: 320px;
+        }
+
+        @include tablet {
+          max-width: 450px;
+        }
+
+        &:first-child {
+            @include tablet {
+                order: 2;
+            }
+        }
+        &:last-child {
+            @include tablet {
+                order: 3;
+            }
+        }
+
+        &--popular {
+            background-color: var(--neutral-color-90);
+            border: 1px solid var(--primary-color-60);
+            transform: translateY(-76px);
+
+            @include tablet {
+                transform: inherit;
+            }
+        }
     }
 
     &__plans {
+        @include flex-all-between;
+
+        @include tablet {
+            flex-direction: column;
+            gap: 20px;
+        }
+
         &-icon {
             @include flex-all-center;
             margin-bottom: 16px;
@@ -89,12 +147,20 @@
             width: 40px;
             height: 40px;
             background-color: var(--neutral-color-20);
+
+            &--popular {
+                background-color: var(--primary-color-30);
+            }
         }
 
         &-title {
             font-weight: 600;
             line-height: 142%;
             color: var(--neutral-color-100);
+
+            &--popular {
+                color: #fff;
+            }
         }
 
         &-descr {
@@ -110,6 +176,13 @@
             letter-spacing: -0.04em;
             color: var(--neutral-color-100);
 
+            &--popular {
+                & span {
+                    color: #fff;
+                }
+                color: #fff;
+            }
+
             &-text {
                 font-weight: 500;
                 line-height: 162%;
@@ -119,11 +192,16 @@
 
         &-list {
             margin-bottom: 40px;
+
             &-title {
                 margin-bottom: 16px;
                 font-weight: 700;
                 line-height: 150%;
                 color: var(--neutral-color-100);
+
+                &--popular {
+                    color: #fff;
+                }
             }
         }
 
@@ -131,6 +209,10 @@
             font-weight: 500;
             line-height: 162%;
             color: var(--neutral-color-100);
+
+            &--popular {
+                color: #fff;
+            }
 
             &::before {
                 content: '';
@@ -163,9 +245,20 @@
             line-height: 150%;
             text-align: center;
             color: var(--neutral-color-100);
+            transition: var(--transition);
+
+            &--popular {
+                background: var(--neutral-color-10);
+                color: var(--neutral-color-100);
+            }
+
+            &:hover {
+                background: var(--neutral-color-100);
+                color: var(--neutral-color-10);
+            }
 
             &-wrapper {
-              text-align: center;
+                text-align: center;
             }
         }
     }
