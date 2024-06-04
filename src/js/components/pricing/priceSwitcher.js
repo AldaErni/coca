@@ -38,7 +38,7 @@ export const usePriceSwitcher = () => {
         if (switcher.checked) {
             setPriceWithSale();
         } else {
-          setPriceDefault();
-        };
+            setPriceDefault();
+        }
     });
 };
