@@ -8,7 +8,9 @@
         max-width: 1440px;
 
         @include mini-desktop {
-          max-width: calc(var(--container-width) - (var(--container-padding) * 2));
+            max-width: calc(
+                var(--container-width) - (var(--container-padding) * 2)
+            );
         }
         @include tablet {
             padding-right: var(--container-padding);
@@ -20,11 +22,10 @@
     }
 
     &__form {
+        @include mobile {
+            @include flex-column-all-center;
+        }
 
-      @include mobile {
-        @include flex-column-all-center;
-
-      }
         &-wrapper {
             position: absolute;
             left: 8%;
@@ -43,10 +44,10 @@
                 min-width: 300px;
             }
             @include mobile {
-              border: 0;
+                border: 0;
                 max-width: 380px;
+                margin-right: 30px;
                 padding-right: 0 30px 0 0;
-                padding: 0;
                 min-width: 0;
             }
         }
@@ -56,7 +57,7 @@
             font-weight: 600;
             line-height: 122%;
             letter-spacing: -0.02em;
-            color: var(--neutral-color-100);
+            color: #1d1e25;
         }
 
         &-text {
