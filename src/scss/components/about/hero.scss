@@ -21,14 +21,25 @@
 
       @include mini-desktop {
         display: none;
-      }
-        
+      }       
     }
     }
 
     &__img {
         position: absolute;
         right: 20%;
-        bottom: 22%;
+        bottom: 21%;
+        
+        & svg {
+          & path {
+            fill: var(--neutral-color-100);
+          }
+          & rect {
+            fill: var(--neutral-color-100);
+          }
+          & circle {
+            fill: var(--neutral-color-100);
+          }
+        }
     }
 }

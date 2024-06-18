@@ -1,0 +1,64 @@
+.ideas {
+    &__container {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    &__slider {
+        margin-bottom: 165px;
+        position: relative;
+        width: 100%;
+
+        &-pagination {
+          @include flex-all-center;
+          background: #fff;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          top: 15%;
+          left: 39%;
+        }
+        
+    }
+
+    &__slide {
+        &-title {
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: var(--neutral-color-100);
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+        &-descr {
+            line-height: 178%;
+            color: #7e8492;
+            margin-bottom: 32px;
+        }
+
+        &-btn {
+            padding: 16px 32px;
+            color: var(--neutral-color-10);
+            background-color: var(--neutral-color-100);
+
+            @include small-tablet {
+                padding: 12px 24px;
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        transition: transform 0.3s ease;
+    }
+
+    &__article {
+        @include flex-all-center;
+        width: auto;
+        flex: 0 0 506px; 
+        height: 629px; 
+        margin-right: 32px; 
+
+    }
+}
