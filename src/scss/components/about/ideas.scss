@@ -1,41 +1,64 @@
 .ideas {
     padding: 135px 0 85px;
+
     &__container {
-        position: relative;
         width: 100%;
+        overflow: hidden;
     }
 
     &__slider {
-        overflow: hidden;
+        position: relative;
 
         margin-bottom: 165px;
-        position: relative;
         width: 100%;
 
-        &-pagination {
-            @include flex-all-center;
-            background: #fff;
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            top: 15%;
-            left: 39%;
+        @include tablet {
+            margin-top: -50px;
         }
     }
 
     &__slide {
+        @include flex-all-center;
+        width: auto;
+        flex: 0 0 506px;
+        max-width: 629px;
+        margin-right: 32px;
+
+        @include mini-desktop {
+            max-width: 400px;
+        }
+        @include tablet {
+            max-width: 300px;
+        }
+        @include small-tablet {
+            max-width: 280px;
+        }
+
         &-title {
             line-height: 150%;
             letter-spacing: -0.01em;
             color: var(--neutral-color-100);
             margin-top: 24px;
             margin-bottom: 8px;
+
+            @include tablet {
+                margin-top: 0px;
+                margin-bottom: 4px;
+                font-size: 24px;
+            }
         }
         &-descr {
             line-height: 178%;
             color: #7e8492;
             margin-bottom: 32px;
+
+            @include mini-desktop {
+                font-size: 16px;
+            }
+            @include tablet {
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
         }
 
         &-btn {
@@ -43,6 +66,10 @@
             color: var(--neutral-color-10);
             background-color: var(--neutral-color-100);
 
+            @include tablet {
+                padding: 12px 24px;
+                font-size: 12px;
+            }
             @include small-tablet {
                 padding: 12px 24px;
             }
@@ -51,27 +78,44 @@
 
     &__wrapper {
         display: flex;
-        transition: transform 0.3s ease;
-    }
-
-    &__article {
-        @include flex-all-center;
-        width: auto;
-        flex: 0 0 506px;
-        height: 629px;
-        margin-right: 32px;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
     }
 
     &__info {
         @include flex-all-between;
         padding-bottom: 80px;
+        gap: 80px;
         border-top: 1px solid var(--neutral-color-30);
+        border-bottom: 1px solid var(--neutral-color-30);
+
+        @include small-tablet {
+            gap: 30px;
+        }
+        @include mobile {
+            flex-direction: column;
+            gap: 0px;
+        }
+
         &-title {
             margin-top: 80px;
             max-width: 480px;
             line-height: 120%;
             letter-spacing: -0.04em;
             color: var(--neutral-color-100);
+
+            @include tablet {
+                font-size: 30px;
+            }
+            @include mobile {
+                margin-top: 20px;
+                font-size: 22px;
+            }
+
+            @include small-mobile {
+                font-size: 20px;
+            }
         }
         &-descr {
             margin-top: 80px;
@@ -79,6 +123,59 @@
             font-weight: 600;
             line-height: 150%;
             color: var(--neutral-color-100);
+            @include mini-desktop {
+                font-size: 20px;
+            }
+            @include tablet {
+                max-width: 400px;
+                font-size: 12px;
+            }
+            @include small-tablet {
+                max-width: 300px;
+                font-size: 12px;
+            }
+            @include mobile {
+                margin-top: 20px;
+                max-width: 250px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        z-index: 1;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        border-radius: 50%;
+
+        @include tablet {
+            width: 60px;
+            height: 60px;
+        }
+
+        &--prev {
+            top: 40%;
+            left: 1%;
+            opacity: 0.5;
+        }
+
+        &--next {
+            top: 40%;
+            right: 0%;
+            rotate: 180deg;
+            opacity: 0.5;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        & svg {
+            & path {
+                fill: #7e8492;
+            }
         }
     }
 }

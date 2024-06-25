@@ -1,0 +1,18 @@
+.customers {
+    padding: 160px 0 160px;
+
+    &__head {
+        &-title {
+            max-width: 903px;
+            margin-bottom: 24px;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color-100);
+        }
+        &-descr {
+            max-width: 534px;
+            margin-bottom: 80px;
+            line-height: 178%;
+            color: #7e8492;
+        }
+    }
+}

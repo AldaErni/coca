@@ -2,15 +2,52 @@
     position: relative;
     padding: 90px 0 160px;
 
+    @include tablet {
+      padding: 60px 0 0px;
+      text-align: center;
+    }
+    @include mobile {
+      padding: 40px 0 0px;
+    }
+
     &__title {
         margin-bottom: 118px;
         max-width: 959px;
         font-weight: 700;
         letter-spacing: -0.04em;
         color: var(--neutral-color-100);
+
+        @include mini-desktop {
+          margin-bottom: 90px;
+        }
+        @include tablet {
+          margin-bottom: 70px;
+        }
+        @include mobile {
+          margin-bottom: 50px;
+        }
+        
     }
 
     &__subtitle {
+
+      @include tablet {
+        justify-content: center;
+        margin-bottom: 30px;
+        }
+      @include small-tablet {
+        font-size: 26px;
+        }
+      @include mobile {
+        font-size: 20px;
+        
+        }
+      @include small-mobile {
+        font-size: 16px;
+        
+        }
+
+      
       &::before {
         content: '';
         display: inline-block;
@@ -22,13 +59,27 @@
       @include mini-desktop {
         display: none;
       }       
+            
     }
+
+
     }
 
     &__img {
         position: absolute;
         right: 20%;
-        bottom: 21%;
+        bottom: 21%;   
+
+        @include mini-desktop {
+          right: 15%;
+        }
+
+        @include tablet {
+          position: inherit;
+          }
+        
+
+        
         
         & svg {
           & path {
@@ -40,6 +91,25 @@
           & circle {
             fill: var(--neutral-color-100);
           }
+
+          @include small-tablet {
+          width: 120px;
+          height: 120px;
+          }
         }
+
+        & svg:hover {
+          & path {
+            opacity: 0.5;
+          }
+          & rect {
+            opacity: 0.5;
+          }
+          & circle {
+            opacity: 0.5;
+          }
+        }
+
+
     }
 }
