@@ -4,9 +4,10 @@ import '/scss/about.scss';
 
 import { useTheme } from './components/theme.js';
 import { useIdeasSlider } from './components/about/slider.js';
+import { useCustomerSlider } from './components/about/slider.js';
 import { useBurger } from './components/burger.js';
 
 useTheme();
 useIdeasSlider();
+useCustomerSlider();
 useBurger();
-

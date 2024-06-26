@@ -23,3 +23,23 @@ export const useIdeasSlider = () => {
         },
     });
 };
+export const useCustomerSlider = () => {
+    new Swiper('.customers__slider', {
+        modules: [Navigation],
+        slidesPerView: 1,
+        spaceBetween: 32,
+        loop: true,
+        navigation: {
+            prevEl: '.customers__btn--prev',
+            nextEl: '.customers__btn--next',
+        },
+        breakpoints: {
+            577: {
+                slidesPerView: 2,
+            },
+            993: {
+                slidesPerView: 3,
+            },
+        },
+    });
+};
