@@ -14,8 +14,11 @@ export const useIdeasSlider = () => {
             nextEl: '.ideas__btn--next',
         },
         breakpoints: {
-            381: {
+            769: {
                 slidesPerView: 2.5,
+            },
+            381: {
+                slidesPerView: 1.5,
             },
         },
     });

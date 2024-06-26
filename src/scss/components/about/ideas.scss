@@ -18,9 +18,8 @@
     }
 
     &__slide {
-        @include flex-all-center;
         width: auto;
-        flex: 0 0 506px;
+
         max-width: 629px;
         margin-right: 32px;
 
@@ -35,6 +34,7 @@
         }
 
         &-title {
+            width: auto;
             line-height: 150%;
             letter-spacing: -0.01em;
             color: var(--neutral-color-100);
@@ -48,6 +48,7 @@
             }
         }
         &-descr {
+            width: auto;
             line-height: 178%;
             color: #7e8492;
             margin-bottom: 32px;
