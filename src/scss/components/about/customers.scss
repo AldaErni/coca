@@ -1,5 +1,9 @@
 .customers {
     padding: 160px 0 160px;
+    @include tablet {
+    padding: 80px 0 100px;
+
+    }
     &__container {
         width: 100%;
         overflow: hidden;
@@ -116,6 +120,49 @@
             & path {
                 fill: #7e8492;
             }
+        }
+    }
+
+    &__info {
+        @include flex-all-between;
+        gap: 10px;
+        @include mini-desktop {
+          flex-direction: column;
+        }
+        &-title {
+            max-width: 626px;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color-100);
+            @include mini-desktop {
+              max-width: 100%;
+            }
+        }
+        &-descr {
+            max-width: 506px;
+            font-weight: 500;
+            line-height: 178%;
+            color: #7e8492;
+
+            a:hover {
+                border-bottom: 1px solid;
+            }
+            a:visited {
+                color: var(--neutral-color-100);
+            }
+
+            @include mini-desktop {
+              max-width: 100%;
+            }
+        }
+
+        &-text {
+            margin-bottom: 24px;
+        }
+
+        &-link {
+            margin-top: 24px;
+            color: var(--neutral-color-100);
+            
         }
     }
 }
