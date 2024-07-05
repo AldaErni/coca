@@ -1,0 +1,45 @@
+.hero {
+    padding: 96px 0 126px;
+    &__title {
+        margin-bottom: 53px;
+    }
+    &__subtitle {
+        margin-bottom: 138px;
+    }
+
+    &__slider {
+        position: relative;
+        overflow: hidden;
+
+        margin-bottom: 165px;
+        width: 100%;
+
+        @include tablet {
+            margin-top: -50px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 90px;
+
+        &-item {
+            cursor: pointer;
+            &:hover {
+                border-bottom: 1px solid;
+            }
+
+            &.active {
+                border-bottom: 1px solid;
+                font-weight: bold;
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+}
