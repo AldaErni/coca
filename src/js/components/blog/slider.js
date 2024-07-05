@@ -10,8 +10,8 @@ export const useBlogSlider = () => {
         spaceBetween: 32,
         loop: true,
         navigation: {
-            prevEl: '.ideas__btn--prev',
-            nextEl: '.ideas__btn--next',
+            prevEl: '.hero__btn--prev',
+            nextEl: '.hero__btn--next',
         },
         breakpoints: {
             769: {
@@ -21,5 +21,42 @@ export const useBlogSlider = () => {
                 slidesPerView: 1.5,
             },
         },
+    });
+};
+
+export const useTabTrigger = () => {
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.js-tab-trigger');
+        const tabContents = document.querySelectorAll('.js-tab-content');
+
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', function () {
+                // Remove 'active' class from all tabs
+                tabs.forEach((t) => t.classList.remove('active'));
+                // Add 'active' class to the clicked tab
+                tab.classList.add('active');
+
+                // Hide all tab contents
+                tabContents.forEach(
+                    (content) => (content.style.display = 'none'),
+                );
+
+                // Get the corresponding tab content ID and display it
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).style.display = 'block';
+            });
+        });
+
+        // Special case for "View all" button
+        const viewAllButton = document.querySelector(
+            ".js-tab-trigger[data-tab='all']",
+        );
+        viewAllButton.addEventListener('click', function () {
+            tabs.forEach((t) => t.classList.remove('active'));
+            viewAllButton.classList.add('active');
+
+            // Display all tab contents
+            tabContents.forEach((content) => (content.style.display = 'block'));
+        });
     });
 };
