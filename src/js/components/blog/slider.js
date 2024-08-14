@@ -23,7 +23,7 @@ export const useBlogSlider = () => {
         },
     });
 
-    return swiper; // Возвращаем экземпляр Swiper, чтобы его можно было уничтожить
+    return swiper; 
 };
 
 export const useTabTrigger = () => {

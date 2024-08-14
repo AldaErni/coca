@@ -44,9 +44,35 @@
 
         &-item {
             display: none;
+
             &.active {
-                display: flex;
+                display: block;
             }
+        }
+
+        &-img {
+            margin-bottom: 16px;
+        }
+
+        &-date {
+            margin-bottom: 24px;
+            line-height: 150%;
+            color: #7e8492;
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
+        }
+
+        &-text {
+            max-width: 332px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            color: #7e8492;
         }
     }
 
