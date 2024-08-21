@@ -25,6 +25,7 @@
         margin-bottom: 90px;
 
         &-item {
+            color: var(--neutral-color-100);
             cursor: pointer;
             &:hover {
                 border-bottom: 1px solid;

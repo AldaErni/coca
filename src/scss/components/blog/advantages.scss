@@ -1,4 +1,28 @@
 .advantages {
     padding: 100px 0px;
     background-color: var(--black-bg-color);
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    &__image {
+        &-title {
+            margin: 24px 0 24px 0;
+            color: #fff;
+            max-width: 583px;
+            font-weight: 600;
+        }
+        &-text {
+            margin-bottom: 159px;
+            max-width: 515px;
+            font-weight: 500;
+            color: #7e8492;
+        }
+    }
+
+    &__image:last-child {
+        transform: translateY(-243px);
+    }
 }
