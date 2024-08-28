@@ -23,7 +23,7 @@ export const useBlogSlider = () => {
         },
     });
 
-    return swiper; 
+    return swiper;
 };
 
 export const useTabTrigger = () => {
@@ -103,4 +103,27 @@ export const useTabTrigger = () => {
             });
         });
     });
+};
+
+export const useArticlesSlider = () => {
+    const swiper = new Swiper('.articles__slider', {
+        modules: [Navigation],
+        slidesPerView: 1.5,
+        spaceBetween: 32,
+        loop: true,
+        navigation: {
+            prevEl: '.articles__btn--prev',
+            nextEl: '.articles__btn--next',
+        },
+        breakpoints: {
+            769: {
+                slidesPerView: 2.5,
+            },
+            381: {
+                slidesPerView: 1.5,
+            },
+        },
+    });
+
+    return swiper;
 };
