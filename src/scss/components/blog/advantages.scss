@@ -23,8 +23,6 @@
         }
     }
     &__image:last-child {
-        position: absolute;
-        right: 668px;
-        bottom: -2527px;
+        transform: translateY(-245px);
     }
 }

@@ -1,2 +1,80 @@
 .articles {
+    padding: 160px 0 160px;
+    
+    &__head {
+        @include flex-all-between;
+        max-width: 1200px;
+    }
+
+    &__title {
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        max-width: 435px;
+        font-weight: 500;
+        color: #7e8492;
+        margin-bottom: 80px;
+    }
+
+    &__btns {
+        @include flex-align-center;
+        justify-content: flex-end;
+        gap: 16px;
+    }
+
+    &__btn {
+        @include flex-all-center;
+        border: 1px solid var(--neutral-color-40);
+        border-radius: 50%;
+        padding: 16px;
+        width: 50px;
+        height: 50px;
+        transition: var(--transition);
+
+        &:hover {
+            background: var(--neutral-color-100);
+            & svg path {
+                fill: var(--neutral-color-10);
+            }
+        }
+        & svg path {
+            transform: var(--transition);
+        }
+
+        &--next {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__slide {
+        &-img {
+            margin-bottom: 24px;
+        }
+
+        &-title {
+
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
+            margin-bottom: 16px;
+        }
+
+        &-text {
+            font-weight: 500;
+            color: #7e8492;
+            margin-bottom: 24px;
+        }
+
+        &-link {
+            color: #1d1e25;
+            background: #fff;
+            border: 1px solid var(--neutral-color-40);
+            padding: 16px 32px;
+
+        }
+    }
 }

@@ -23,6 +23,8 @@
         display: flex;
         gap: 30px;
         margin-bottom: 90px;
+        @include tablet {
+        }
 
         &-item {
             color: var(--neutral-color-100);
