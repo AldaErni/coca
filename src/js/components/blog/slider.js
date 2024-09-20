@@ -108,12 +108,20 @@ export const useTabTrigger = () => {
 export const useArticlesSlider = () => {
     const swiper = new Swiper('.articles__slider', {
         modules: [Navigation],
-        slidesPerView: 2.8,
+        slidesPerView: 1,
         spaceBetween: 32,
         loop: true,
         navigation: {
             prevEl: '.articles__btn--prev',
             nextEl: '.articles__btn--next',
+        },
+        breakpoints: {
+            769: {
+                slidesPerView: 2.9,
+            },
+            381: {
+                slidesPerView: 2,
+            },
         },
     });
 

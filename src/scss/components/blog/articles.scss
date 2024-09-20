@@ -1,9 +1,8 @@
 .articles {
     padding: 160px 0 160px;
-    
+
     &__head {
         @include flex-all-between;
-        max-width: 1200px;
     }
 
     &__title {
@@ -53,10 +52,13 @@
     &__slide {
         &-img {
             margin-bottom: 24px;
+            @include small-tablet {
+              display: flex;
+              justify-content: center;
+            }
         }
 
         &-title {
-
             font-weight: 600;
             letter-spacing: -0.03em;
             color: var(--neutral-color-100);
@@ -74,7 +76,19 @@
             background: #fff;
             border: 1px solid var(--neutral-color-40);
             padding: 16px 32px;
+        }
 
+        &-button {
+            color: #1d1e25;
+            background: #fff;
+            border: 1px solid var(--neutral-color-40);
+            padding: 16px 32px;
+
+            &:hover {
+                background-color: #7e8492;
+                color: #fff;
+                border: none;
+            }
         }
     }
 }

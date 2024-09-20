@@ -1,10 +1,13 @@
 .advantages {
-    padding: 120px 0px;
+    padding: 120px 0px 120px;
     background-color: var(--black-bg-color);
+
     &__container {
         display: flex;
-        flex-wrap: wrap;
         gap: 32px;
+        @include mobile {
+          display: block;
+        }
     }
 
     &__image {
@@ -15,14 +18,27 @@
             font-weight: 600;
         }
         &-text {
-            margin-bottom: 159px;
-
             max-width: 515px;
             font-weight: 500;
             color: #7e8492;
         }
+
+        &-first,
+        &-third {
+            margin-bottom: 159px;
+
+            @include mini-desktop {
+              margin-bottom: 120px;
+            }
+
+            @include small-tablet {
+              margin-bottom: 90px;
+            }
+        }
     }
-    &__image:last-child {
-        transform: translateY(-245px);
+    &__image img {
+      @include mobile {
+        display: none;
+      }
     }
 }
