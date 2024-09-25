@@ -1,0 +1,79 @@
+.explain {
+    padding: 80px 0 160px;
+    &__container {
+        padding-left: 250px;
+    }
+    &__title {
+        max-width: 970px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+        margin-bottom: 80px;
+    }
+
+    &__article {
+        &-desc {
+            @include flex-all-between;
+            max-width: 940px;
+            margin-bottom: 24px;
+        }
+        &-autor {
+            @include flex-align-center;
+            gap: 24px;
+            font-style: normal;
+
+            &-avatar {
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            &-name {
+                font-weight: 600;
+                line-height: 144%;
+                color: var(--neutral-color-100);
+            }
+
+            &-professions {
+                font-weight: 500;
+                line-height: 162%;
+                color: #7e8492;
+            }
+
+            &-date {
+                font-weight: 500;
+                color: #7e8492;
+            }
+        }
+
+        &-img {
+            margin-bottom: 80px;
+        }
+
+        &-text {
+            margin-bottom: 56px;
+            font-weight: 400;
+            line-height: 178%;
+            color: var(--neutral-color-100);
+
+            &-title {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__review {
+        display: flex;
+        gap: 48px;
+
+        &-socials {
+            @include flex-align-center;
+            gap: 32px;
+
+           
+        }
+
+        &-socials svg {
+            fill: var(--neutral-color-100);
+        }
+    }
+}
