@@ -1,7 +1,19 @@
 .explain {
-    padding: 80px 0 160px;
     &__container {
-        padding-left: 250px;
+      padding: 80px 250px 250px 160px;
+
+      @include tablet {
+        padding: 60px 150px 150px 120px;
+
+      }
+      
+      @include small-tablet {
+        padding: 40px 120px 120px 80px;
+      }
+
+      @include mobile {
+        padding: 40px 40px 40px 80px;
+      }
     }
     &__title {
         max-width: 970px;
@@ -9,6 +21,11 @@
         letter-spacing: -0.04em;
         color: var(--neutral-color-100);
         margin-bottom: 80px;
+
+        @include mini-desktop {
+          text-align: center;
+
+        }
     }
 
     &__article {
@@ -16,15 +33,22 @@
             @include flex-all-between;
             max-width: 940px;
             margin-bottom: 24px;
+
+            @include tablet {
+              margin-bottom: 15px;
+            }
         }
         &-autor {
             @include flex-align-center;
             gap: 24px;
-            font-style: normal;
 
             &-avatar {
                 overflow: hidden;
                 border-radius: 50%;
+
+                @include tablet {
+                  display: none;
+                }
             }
 
             &-name {
@@ -40,6 +64,7 @@
             }
 
             &-date {
+              margin-left: 80px;
                 font-weight: 500;
                 color: #7e8492;
             }
@@ -47,6 +72,10 @@
 
         &-img {
             margin-bottom: 80px;
+
+            @include tablet {
+              margin-bottom: 40px;
+            }
         }
 
         &-text {
@@ -65,15 +94,59 @@
         display: flex;
         gap: 48px;
 
+        @include tablet {
+          display: block;
+        }
+
         &-socials {
             @include flex-align-center;
             gap: 32px;
+            margin-bottom: 14px;
 
-           
+            &-text {
+              @include mobile {
+                display: none;
+              }
+            }
         }
 
         &-socials svg {
             fill: var(--neutral-color-100);
+        }
+
+        &-img {
+          @include tablet {
+            margin-bottom: 16px;
+            
+          }
+        }
+
+        &-autor {
+            &-namefield {
+                margin-bottom: 16px;
+                font-weight: 400;
+                color: #7e8492;
+            }
+
+            &-name {
+                margin-bottom: 16px;
+                font-weight: 600;
+                letter-spacing: -0.03em;
+                color: var(--neutral-color-100);
+            }
+
+            &-profession {
+                margin-bottom: 16px;
+                font-weight: 500;
+                color: #7e8492;
+            }
+
+            &-text {
+                font-weight: 400;
+                line-height: 178%;
+                color: var(--neutral-color-100);
+                max-width: 650px;
+            }
         }
     }
 }
